@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "b36818a78e1460eed609d6d51b385bb3652a4f45"
+    "signature": "faa1d14b4c74133028e34bf5c8d8c4d0878f0d45"
   },
   "compilationOptions": {
     "defines": [
@@ -26,7 +26,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
-          "Microsoft.NETCore.App": "2.2.0"
+          "Microsoft.NETCore.App": "2.2.0",
+          "OrchardCore.Localization.Core": "1.0.0-beta2-70992"
         },
         "runtime": {
           "MvcMovie.dll": {}
@@ -204,6 +205,40 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0"
+        }
+      },
+      "OrchardCore.Localization.Abstractions/1.0.0-beta2-70992": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Localization": "2.2.0",
+          "Microsoft.Extensions.Caching.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Localization.Abstractions": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OrchardCore.Localization.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/OrchardCore.Localization.Abstractions.dll": {}
+        }
+      },
+      "OrchardCore.Localization.Core/1.0.0-beta2-70992": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Caching.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Localization": "2.2.0",
+          "Microsoft.Extensions.Localization.Abstractions": "2.2.0",
+          "OrchardCore.Localization.Abstractions": "1.0.0-beta2-70992"
+        },
+        "runtime": {
+          "lib/netstandard2.0/OrchardCore.Localization.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/OrchardCore.Localization.Core.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3275,6 +3310,20 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "OrchardCore.Localization.Abstractions/1.0.0-beta2-70992": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gzMi4b7KkKBfVvCiGf5/6MOPHUW05LM/ecfFdhfs1FCkZKVF80O+gi5cla7q+X4U/wYCX3bl7GB6HjUvQP453A==",
+      "path": "orchardcore.localization.abstractions/1.0.0-beta2-70992",
+      "hashPath": "orchardcore.localization.abstractions.1.0.0-beta2-70992.nupkg.sha512"
+    },
+    "OrchardCore.Localization.Core/1.0.0-beta2-70992": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JoSv+aLaKGUyT7Io7IyeKBRMp6M2Vvg4Ei3YhIWsCkB8jDB3ID+Ev05wBGfdxoKf+3kXFMgYm/Qf/+m8CGIvSw==",
+      "path": "orchardcore.localization.core/1.0.0-beta2-70992",
+      "hashPath": "orchardcore.localization.core.1.0.0-beta2-70992.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

@@ -2746,6 +2746,36 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "OrchardCore.Localization.Abstractions/1.0.0-beta2-70992": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Localization": "2.1.3",
+          "Microsoft.Extensions.Caching.Abstractions": "2.1.2",
+          "Microsoft.Extensions.Localization.Abstractions": "2.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/OrchardCore.Localization.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/OrchardCore.Localization.Abstractions.dll": {}
+        }
+      },
+      "OrchardCore.Localization.Core/1.0.0-beta2-70992": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
+          "Microsoft.Extensions.Caching.Abstractions": "2.1.2",
+          "Microsoft.Extensions.Localization": "2.1.1",
+          "Microsoft.Extensions.Localization.Abstractions": "2.1.1",
+          "OrchardCore.Localization.Abstractions": "1.0.0-beta2-70992"
+        },
+        "compile": {
+          "lib/netstandard2.0/OrchardCore.Localization.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/OrchardCore.Localization.Core.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -7378,6 +7408,30 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "OrchardCore.Localization.Abstractions/1.0.0-beta2-70992": {
+      "sha512": "gzMi4b7KkKBfVvCiGf5/6MOPHUW05LM/ecfFdhfs1FCkZKVF80O+gi5cla7q+X4U/wYCX3bl7GB6HjUvQP453A==",
+      "type": "package",
+      "path": "orchardcore.localization.abstractions/1.0.0-beta2-70992",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/OrchardCore.Localization.Abstractions.dll",
+        "orchardcore.localization.abstractions.1.0.0-beta2-70992.nupkg.sha512",
+        "orchardcore.localization.abstractions.nuspec"
+      ]
+    },
+    "OrchardCore.Localization.Core/1.0.0-beta2-70992": {
+      "sha512": "JoSv+aLaKGUyT7Io7IyeKBRMp6M2Vvg4Ei3YhIWsCkB8jDB3ID+Ev05wBGfdxoKf+3kXFMgYm/Qf/+m8CGIvSw==",
+      "type": "package",
+      "path": "orchardcore.localization.core/1.0.0-beta2-70992",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/OrchardCore.Localization.Core.dll",
+        "orchardcore.localization.core.1.0.0-beta2-70992.nupkg.sha512",
+        "orchardcore.localization.core.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -12066,7 +12120,8 @@
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "OrchardCore.Localization.Core >= 1.0.0-beta2-70992"
     ]
   },
   "packageFolders": {
@@ -12126,6 +12181,10 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "OrchardCore.Localization.Core": {
+            "target": "Package",
+            "version": "[1.0.0-beta2-70992, )"
           }
         },
         "imports": [
