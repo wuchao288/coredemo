@@ -1,2 +1,5 @@
 msgid "Hello world!"
 msgstr "您好"
+
+msgid "Hello world!1"
+msgstr "您好2"
