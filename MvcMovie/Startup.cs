@@ -61,7 +61,7 @@ namespace MvcMovie
                     options.DefaultRequestCulture = new RequestCulture("en");
                     options.SupportedCultures = supportedCultures;
                     options.SupportedUICultures = supportedCultures;
-                    //要用的语言转换器,来源有 查询字符串，cookie,header
+                    //要用的语言转换器,来查询字符串，cookie,header
                     options.RequestCultureProviders = new[] { new CookieRequestCultureProvider() };
                     //
                     //options.RequestCultureProviders = new List<IRequestCultureProvider>
