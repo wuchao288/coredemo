@@ -1,0 +1,14 @@
+F:\vsdemo\Service\bin\Debug\netcoreapp2.2\Service.deps.json
+F:\vsdemo\Service\bin\Debug\netcoreapp2.2\Service.dll
+F:\vsdemo\Service\bin\Debug\netcoreapp2.2\Service.pdb
+F:\vsdemo\Service\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.dll
+F:\vsdemo\Service\bin\Debug\netcoreapp2.2\Model.dll
+F:\vsdemo\Service\bin\Debug\netcoreapp2.2\Model.pdb
+F:\vsdemo\Service\bin\Debug\netcoreapp2.2\Microsoft.EntityFrameworkCore.xml
+F:\vsdemo\Service\obj\Debug\netcoreapp2.2\Service.csprojAssemblyReference.cache
+F:\vsdemo\Service\obj\Debug\netcoreapp2.2\Service.csproj.CoreCompileInputs.cache
+F:\vsdemo\Service\obj\Debug\netcoreapp2.2\Service.AssemblyInfoInputs.cache
+F:\vsdemo\Service\obj\Debug\netcoreapp2.2\Service.AssemblyInfo.cs
+F:\vsdemo\Service\obj\Debug\netcoreapp2.2\Service.csproj.CopyComplete
+F:\vsdemo\Service\obj\Debug\netcoreapp2.2\Service.dll
+F:\vsdemo\Service\obj\Debug\netcoreapp2.2\Service.pdb

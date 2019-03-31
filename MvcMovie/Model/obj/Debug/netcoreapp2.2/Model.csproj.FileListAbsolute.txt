@@ -1,0 +1,7 @@
+F:\vsdemo\MvcMovie\Model\bin\Debug\netcoreapp2.2\Model.deps.json
+F:\vsdemo\MvcMovie\Model\bin\Debug\netcoreapp2.2\Model.dll
+F:\vsdemo\MvcMovie\Model\bin\Debug\netcoreapp2.2\Model.pdb
+F:\vsdemo\MvcMovie\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache
+F:\vsdemo\MvcMovie\Model\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+F:\vsdemo\MvcMovie\Model\obj\Debug\netcoreapp2.2\Model.dll
+F:\vsdemo\MvcMovie\Model\obj\Debug\netcoreapp2.2\Model.pdb

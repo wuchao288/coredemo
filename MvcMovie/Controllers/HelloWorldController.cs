@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
+using Service;
+using Model;
 
 namespace MvcMovie.Controllers
 {
@@ -19,6 +21,13 @@ namespace MvcMovie.Controllers
         public string Welcome()
         {
             return "This is the Welcome action method...";
+        }
+
+
+        public IActionResult List()
+        {
+            new MovieServer().GetDb().GetById(12);
+            return View();
         }
     }
 }

@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcMovie", "MvcMovie.csproj", "{43DBBDEC-08E8-44DC-9B79-BAC415F97D70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "..\Service\Service.csproj", "{6F3D99C6-6261-4472-A5DB-98A2F3ECF52B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{1E9FD85F-E2B3-4B07-BED0-A0A8FCA5EE37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{43DBBDEC-08E8-44DC-9B79-BAC415F97D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43DBBDEC-08E8-44DC-9B79-BAC415F97D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43DBBDEC-08E8-44DC-9B79-BAC415F97D70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F3D99C6-6261-4472-A5DB-98A2F3ECF52B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F3D99C6-6261-4472-A5DB-98A2F3ECF52B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F3D99C6-6261-4472-A5DB-98A2F3ECF52B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F3D99C6-6261-4472-A5DB-98A2F3ECF52B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E9FD85F-E2B3-4B07-BED0-A0A8FCA5EE37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E9FD85F-E2B3-4B07-BED0-A0A8FCA5EE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E9FD85F-E2B3-4B07-BED0-A0A8FCA5EE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E9FD85F-E2B3-4B07-BED0-A0A8FCA5EE37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

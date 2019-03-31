@@ -43,8 +43,8 @@ namespace MvcMovie
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix); ;
 
-            services.AddDbContext<MvcMovieContext>(options =>
-              options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));
+            //services.AddDbContext<MvcMovieContext>(options =>
+            //  options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));
 
             //services.AddPortableObjectLocalization();
             //指定资源文件的位置
