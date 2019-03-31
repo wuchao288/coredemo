@@ -12,4 +12,7 @@
     <PackageReference Include="OrchardCore.Localization.Core" Version="1.0.0-beta2-70992" />
   </ItemGroup>
 
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>

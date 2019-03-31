@@ -46,8 +46,9 @@ namespace MvcMovie
             services.AddDbContext<MvcMovieContext>(options =>
               options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));
 
-            services.AddPortableObjectLocalization();
-
+            //services.AddPortableObjectLocalization();
+            //指定资源文件的位置
+            services.AddPortableObjectLocalization(options => options.ResourcesPath = "Localization");
             services.Configure<RequestLocalizationOptions>(options =>
                 {
                     var supportedCultures = new List<CultureInfo>
@@ -60,7 +61,9 @@ namespace MvcMovie
                     options.DefaultRequestCulture = new RequestCulture("en");
                     options.SupportedCultures = supportedCultures;
                     options.SupportedUICultures = supportedCultures;
+                    //要用的语言转换器,来源有 查询字符串，cookie,header
                     options.RequestCultureProviders = new[] { new CookieRequestCultureProvider() };
+                    //
                     //options.RequestCultureProviders = new List<IRequestCultureProvider>
                     //{
                     //  new XdoveRequestCultureProvider()//重写的RequestCultureProvider()
