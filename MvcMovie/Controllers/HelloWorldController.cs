@@ -29,5 +29,9 @@ namespace MvcMovie.Controllers
             new MovieServer().GetDb().GetById(12);
             return View();
         }
+       public  IActionResult Insert()
+        {
+            return View();
+        }
     }
 }

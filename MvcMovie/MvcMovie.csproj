@@ -1,10 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <UserSecretsId>5461d65a-ef7a-425f-904c-47a263919704</UserSecretsId>
      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+     <ApplicationIcon />
+     <OutputType>Library</OutputType>
+     <StartupObject />
   </PropertyGroup>
 
 
@@ -16,8 +19,8 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj" />
     <ProjectReference Include="..\Service\Service.csproj" />
-    <ProjectReference Include="Model\Model.csproj" />
   </ItemGroup>
 
 

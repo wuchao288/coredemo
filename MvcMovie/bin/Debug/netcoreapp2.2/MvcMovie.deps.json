@@ -16,7 +16,7 @@
     "warningsAsErrors": false,
     "optimize": false,
     "keyFile": "",
-    "emitEntryPoint": true,
+    "emitEntryPoint": false,
     "xmlDoc": false,
     "debugType": "portable"
   },
@@ -792,6 +792,9 @@
         }
       },
       "Model/1.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.App": "2.2.0"
+        },
         "runtime": {
           "Model.dll": {}
         },

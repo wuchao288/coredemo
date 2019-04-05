@@ -5127,7 +5127,10 @@
       },
       "Model/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
+        "framework": ".NETCoreApp,Version=v1.1",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.1.2"
+        },
         "compile": {
           "bin/placeholder/Model.dll": {}
         },
@@ -13796,8 +13799,8 @@
     },
     "Model/1.0.0": {
       "type": "project",
-      "path": "Model/Model.csproj",
-      "msbuildProject": "Model/Model.csproj"
+      "path": "../Model/Model.csproj",
+      "msbuildProject": "../Model/Model.csproj"
     },
     "Service/1.0.0": {
       "type": "project",
@@ -13845,8 +13848,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "F:\\vsdemo\\MvcMovie\\Model\\Model.csproj": {
-              "projectPath": "F:\\vsdemo\\MvcMovie\\Model\\Model.csproj"
+            "F:\\vsdemo\\Model\\Model.csproj": {
+              "projectPath": "F:\\vsdemo\\Model\\Model.csproj"
             },
             "F:\\vsdemo\\Service\\Service.csproj": {
               "projectPath": "F:\\vsdemo\\Service\\Service.csproj"
