@@ -1,0 +1,162 @@
+2019-04-15 00:27:36,775  INFO Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.? [?] - MESSAGE: User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+ 2019-04-15 00:27:37,710  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/  
+ 2019-04-15 00:27:37,714  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 DEBUG http://localhost:53107/  0
+ 2019-04-15 00:27:37,716  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/  
+ 2019-04-15 00:27:37,718  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 DEBUG http://localhost:53107/  0
+ 2019-04-15 00:27:37,761  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 51.6955ms 200 
+ 2019-04-15 00:27:37,763  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 51.6955ms 200 
+ 2019-04-15 00:27:37,791  INFO Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.? [?] - MESSAGE: Cookies was not authenticated. Failure message: Ticket expired
+ 2019-04-15 00:27:37,795  INFO Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.? [?] - MESSAGE: Cookies was not authenticated. Failure message: Ticket expired
+ 2019-04-15 00:27:37,839  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.HomeController.Index (MvcMovie)'
+ 2019-04-15 00:27:37,844  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.HomeController.Index (MvcMovie)'
+ 2019-04-15 00:27:37,871  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Index", controller = "Home"}. Executing action MvcMovie.Controllers.HomeController.Index (MvcMovie)
+ 2019-04-15 00:27:37,875  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Index", controller = "Home"}. Executing action MvcMovie.Controllers.HomeController.Index (MvcMovie)
+ 2019-04-15 00:27:37,884  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Authorization failed for the request at filter 'MvcMovie.PermissionFilter'.
+ 2019-04-15 00:27:37,887  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Authorization failed for the request at filter 'MvcMovie.PermissionFilter'.
+ 2019-04-15 00:27:37,896  INFO Microsoft.AspNetCore.Mvc.Infrastructure.RedirectResultExecutor.? [?] - MESSAGE: Executing RedirectResult, redirecting to /Login/Login.
+ 2019-04-15 00:27:37,898  INFO Microsoft.AspNetCore.Mvc.Infrastructure.RedirectResultExecutor.? [?] - MESSAGE: Executing RedirectResult, redirecting to /Login/Login.
+ 2019-04-15 00:27:37,903  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.HomeController.Index (MvcMovie) in 21.7017ms
+ 2019-04-15 00:27:37,905  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.HomeController.Index (MvcMovie) in 21.7017ms
+ 2019-04-15 00:27:37,912  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.HomeController.Index (MvcMovie)'
+ 2019-04-15 00:27:37,914  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.HomeController.Index (MvcMovie)'
+ 2019-04-15 00:27:37,929  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 215.4278ms 302 
+ 2019-04-15 00:27:37,931  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 215.4278ms 302 
+ 2019-04-15 00:27:37,942  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/Login/Login  
+ 2019-04-15 00:27:37,946  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/Login/Login  
+ 2019-04-15 00:27:37,959  INFO Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.? [?] - MESSAGE: Cookies was not authenticated. Failure message: Ticket expired
+ 2019-04-15 00:27:37,962  INFO Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.? [?] - MESSAGE: Cookies was not authenticated. Failure message: Ticket expired
+ 2019-04-15 00:27:37,969  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.LoginController.Login (MvcMovie)'
+ 2019-04-15 00:27:37,971  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.LoginController.Login (MvcMovie)'
+ 2019-04-15 00:27:37,986  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Login", controller = "Login"}. Executing action MvcMovie.Controllers.LoginController.Login (MvcMovie)
+ 2019-04-15 00:27:37,987  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Login", controller = "Login"}. Executing action MvcMovie.Controllers.LoginController.Login (MvcMovie)
+ 2019-04-15 00:27:38,012  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.LoginController.Login (MvcMovie) with arguments () - Validation state: Valid
+ 2019-04-15 00:27:38,014  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.LoginController.Login (MvcMovie) with arguments () - Validation state: Valid
+ 2019-04-15 00:27:38,031  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.LoginController.Login (MvcMovie), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9585ms.
+ 2019-04-15 00:27:38,034  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.LoginController.Login (MvcMovie), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9585ms.
+ 2019-04-15 00:27:38,075  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executing ViewResult, running view Login.
+ 2019-04-15 00:27:38,079  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executing ViewResult, running view Login.
+ 2019-04-15 00:27:38,289  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executed ViewResult - view Login executed in 235.7542ms.
+ 2019-04-15 00:27:38,296  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executed ViewResult - view Login executed in 235.7542ms.
+ 2019-04-15 00:27:38,316  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.LoginController.Login (MvcMovie) in 324.4036ms
+ 2019-04-15 00:27:38,318  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.LoginController.Login (MvcMovie) in 324.4036ms
+ 2019-04-15 00:27:38,322  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.LoginController.Login (MvcMovie)'
+ 2019-04-15 00:27:38,328  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.LoginController.Login (MvcMovie)'
+ 2019-04-15 00:27:38,341  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 402.2977ms 200 text/html; charset=utf-8
+ 2019-04-15 00:27:38,344  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 402.2977ms 200 text/html; charset=utf-8
+ 2019-04-15 00:27:40,176  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 POST http://localhost:44351/Login/Login application/x-www-form-urlencoded 210
+ 2019-04-15 00:27:40,181  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 POST http://localhost:44351/Login/Login application/x-www-form-urlencoded 210
+ 2019-04-15 00:27:40,186  INFO Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.? [?] - MESSAGE: Cookies was not authenticated. Failure message: Ticket expired
+ 2019-04-15 00:27:40,188  INFO Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.? [?] - MESSAGE: Cookies was not authenticated. Failure message: Ticket expired
+ 2019-04-15 00:27:40,199  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.LoginController.LoginPost (MvcMovie)'
+ 2019-04-15 00:27:40,202  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.LoginController.LoginPost (MvcMovie)'
+ 2019-04-15 00:27:40,218  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Login", controller = "Login"}. Executing action MvcMovie.Controllers.LoginController.LoginPost (MvcMovie)
+ 2019-04-15 00:27:40,220  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Login", controller = "Login"}. Executing action MvcMovie.Controllers.LoginController.LoginPost (MvcMovie)
+ 2019-04-15 00:27:40,288  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.LoginController.LoginPost (MvcMovie) with arguments (Model.LoginViewModel, ) - Validation state: Valid
+ 2019-04-15 00:27:40,292  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.LoginController.LoginPost (MvcMovie) with arguments (Model.LoginViewModel, ) - Validation state: Valid
+ 2019-04-15 00:27:40,305  INFO Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.? [?] - MESSAGE: AuthenticationScheme: Cookies signed in.
+ 2019-04-15 00:27:40,309  INFO Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.? [?] - MESSAGE: AuthenticationScheme: Cookies signed in.
+ 2019-04-15 00:27:40,315  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.LoginController.LoginPost (MvcMovie), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 17.0982ms.
+ 2019-04-15 00:27:40,317  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.LoginController.LoginPost (MvcMovie), returned result Microsoft.AspNetCore.Mvc.RedirectResult in 17.0982ms.
+ 2019-04-15 00:27:40,322  INFO Microsoft.AspNetCore.Mvc.Infrastructure.RedirectResultExecutor.? [?] - MESSAGE: Executing RedirectResult, redirecting to /.
+ 2019-04-15 00:27:40,327  INFO Microsoft.AspNetCore.Mvc.Infrastructure.RedirectResultExecutor.? [?] - MESSAGE: Executing RedirectResult, redirecting to /.
+ 2019-04-15 00:27:40,333  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.LoginController.LoginPost (MvcMovie) in 109.0624ms
+ 2019-04-15 00:27:40,335  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.LoginController.LoginPost (MvcMovie) in 109.0624ms
+ 2019-04-15 00:27:40,338  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.LoginController.LoginPost (MvcMovie)'
+ 2019-04-15 00:27:40,342  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.LoginController.LoginPost (MvcMovie)'
+ 2019-04-15 00:27:40,353  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 171.4562ms 302 
+ 2019-04-15 00:27:40,355  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/  
+ 2019-04-15 00:27:40,358  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 171.4562ms 302 
+ 2019-04-15 00:27:40,363  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/  
+ 2019-04-15 00:27:40,370  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.HomeController.Index (MvcMovie)'
+ 2019-04-15 00:27:40,376  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.HomeController.Index (MvcMovie)'
+ 2019-04-15 00:27:40,384  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Index", controller = "Home"}. Executing action MvcMovie.Controllers.HomeController.Index (MvcMovie)
+ 2019-04-15 00:27:40,386  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Index", controller = "Home"}. Executing action MvcMovie.Controllers.HomeController.Index (MvcMovie)
+ 2019-04-15 00:27:40,396  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.HomeController.Index (MvcMovie) - Validation state: Valid
+ 2019-04-15 00:27:40,400  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.HomeController.Index (MvcMovie) - Validation state: Valid
+ 2019-04-15 00:27:40,403  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.HomeController.Index (MvcMovie), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.3565ms.
+ 2019-04-15 00:27:40,405  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.HomeController.Index (MvcMovie), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.3565ms.
+ 2019-04-15 00:27:40,415  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executing ViewResult, running view Index.
+ 2019-04-15 00:27:40,417  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executing ViewResult, running view Index.
+ 2019-04-15 00:27:40,431  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executed ViewResult - view Index executed in 17.4851ms.
+ 2019-04-15 00:27:40,434  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executed ViewResult - view Index executed in 17.4851ms.
+ 2019-04-15 00:27:40,444  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.HomeController.Index (MvcMovie) in 48.8922ms
+ 2019-04-15 00:27:40,446  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.HomeController.Index (MvcMovie) in 48.8922ms
+ 2019-04-15 00:27:40,454  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.HomeController.Index (MvcMovie)'
+ 2019-04-15 00:27:40,459  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.HomeController.Index (MvcMovie)'
+ 2019-04-15 00:27:40,464  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 112.5578ms 200 text/html; charset=utf-8
+ 2019-04-15 00:27:40,469  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 112.5578ms 200 text/html; charset=utf-8
+ 2019-04-15 00:27:43,541  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/helloworld/insert  
+ 2019-04-15 00:27:43,545  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/helloworld/insert  
+ 2019-04-15 00:27:43,553  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:27:43,558  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:27:43,566  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Insert", controller = "HelloWorld"}. Executing action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)
+ 2019-04-15 00:27:43,568  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Insert", controller = "HelloWorld"}. Executing action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)
+ 2019-04-15 00:27:43,574  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) - Validation state: Valid
+ 2019-04-15 00:27:43,576  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) - Validation state: Valid
+ 2019-04-15 00:27:49,043  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/helloworld/insert  
+ 2019-04-15 00:27:49,049  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/helloworld/insert  
+ 2019-04-15 00:27:49,051 ERROR MvcMovie.Controllers.HelloWorldController.? [?] - MESSAGE: wewew
+ 2019-04-15 00:27:49,054 ERROR MvcMovie.Controllers.HelloWorldController.? [?] - MESSAGE: wewew
+ 2019-04-15 00:27:49,060  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:27:49,062  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:27:49,066  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Insert", controller = "HelloWorld"}. Executing action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)
+ 2019-04-15 00:27:49,068  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Insert", controller = "HelloWorld"}. Executing action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)
+ 2019-04-15 00:27:49,072  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) - Validation state: Valid
+ 2019-04-15 00:27:49,075  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) - Validation state: Valid
+ 2019-04-15 00:27:51,115 ERROR MvcMovie.Controllers.HelloWorldController.? [?] - MESSAGE: wewew
+ 2019-04-15 00:27:51,118 ERROR MvcMovie.Controllers.HelloWorldController.? [?] - MESSAGE: wewew
+ 2019-04-15 00:27:55,363  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie), returned result Microsoft.AspNetCore.Mvc.ViewResult in 11781.054ms.
+ 2019-04-15 00:27:55,365  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6283.6509ms.
+ 2019-04-15 00:27:55,368  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie), returned result Microsoft.AspNetCore.Mvc.ViewResult in 11781.054ms.
+ 2019-04-15 00:27:55,369  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6283.6509ms.
+ 2019-04-15 00:27:55,376  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executing ViewResult, running view Insert.
+ 2019-04-15 00:27:55,378  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executing ViewResult, running view Insert.
+ 2019-04-15 00:27:55,381  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executing ViewResult, running view Insert.
+ 2019-04-15 00:27:55,384  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executing ViewResult, running view Insert.
+ 2019-04-15 00:27:55,425  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executed ViewResult - view Insert executed in 50.4456ms.
+ 2019-04-15 00:27:55,427  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executed ViewResult - view Insert executed in 50.4456ms.
+ 2019-04-15 00:27:55,433  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executed ViewResult - view Insert executed in 51.0221ms.
+ 2019-04-15 00:27:55,434  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) in 6361.0461ms
+ 2019-04-15 00:27:55,437  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executed ViewResult - view Insert executed in 51.0221ms.
+ 2019-04-15 00:27:55,438  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) in 6361.0461ms
+ 2019-04-15 00:27:55,446  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) in 11870.5553ms
+ 2019-04-15 00:27:55,447  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:27:55,450  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:27:55,449  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) in 11870.5553ms
+ 2019-04-15 00:27:55,457  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:27:55,461  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:27:55,458  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 6414.2067ms 200 text/html; charset=utf-8
+ 2019-04-15 00:27:55,467  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 6414.2067ms 200 text/html; charset=utf-8
+ 2019-04-15 00:27:55,467  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 11930.4921ms 200 text/html; charset=utf-8
+ 2019-04-15 00:27:55,470  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 11930.4921ms 200 text/html; charset=utf-8
+ 2019-04-15 00:29:09,924  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/helloworld/insert  
+ 2019-04-15 00:29:09,935  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/helloworld/insert  
+ 2019-04-15 00:29:09,946  INFO Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.? [?] - MESSAGE: Cookies was not authenticated. Failure message: Ticket expired
+ 2019-04-15 00:29:09,948  INFO Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler.? [?] - MESSAGE: Cookies was not authenticated. Failure message: Ticket expired
+ 2019-04-15 00:29:09,953  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:29:09,955  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executing endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:29:09,959  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Insert", controller = "HelloWorld"}. Executing action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)
+ 2019-04-15 00:29:09,961  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Route matched with {action = "Insert", controller = "HelloWorld"}. Executing action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)
+ 2019-04-15 00:29:09,965  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) - Validation state: Valid
+ 2019-04-15 00:29:09,966  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executing action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) - Validation state: Valid
+ 2019-04-15 00:29:12,685 ERROR MvcMovie.Controllers.HelloWorldController.? [?] - MESSAGE: wewew
+ 2019-04-15 00:29:12,688 ERROR MvcMovie.Controllers.HelloWorldController.? [?] - MESSAGE: wewew
+ 2019-04-15 00:29:17,319  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie), returned result Microsoft.AspNetCore.Mvc.ViewResult in 7348.2018ms.
+ 2019-04-15 00:29:17,322  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action method MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie), returned result Microsoft.AspNetCore.Mvc.ViewResult in 7348.2018ms.
+ 2019-04-15 00:29:17,376  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executing ViewResult, running view Insert.
+ 2019-04-15 00:29:17,379  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executing ViewResult, running view Insert.
+ 2019-04-15 00:29:17,889  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executed ViewResult - view Insert executed in 561.2498ms.
+ 2019-04-15 00:29:17,891  INFO Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.? [?] - MESSAGE: Executed ViewResult - view Insert executed in 561.2498ms.
+ 2019-04-15 00:29:17,897  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) in 7930.8897ms
+ 2019-04-15 00:29:17,902  INFO Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.? [?] - MESSAGE: Executed action MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie) in 7930.8897ms
+ 2019-04-15 00:29:17,911  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:29:17,913  INFO Microsoft.AspNetCore.Routing.EndpointMiddleware.? [?] - MESSAGE: Executed endpoint 'MvcMovie.Controllers.HelloWorldController.Insert (MvcMovie)'
+ 2019-04-15 00:29:17,922  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 7998.4957ms 200 text/html; charset=utf-8
+ 2019-04-15 00:29:17,925  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 7998.4957ms 200 text/html; charset=utf-8
+ 2019-04-15 00:29:17,963  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/favicon.ico  
+ 2019-04-15 00:29:17,966  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request starting HTTP/1.1 GET http://localhost:44351/favicon.ico  
+ 2019-04-15 00:29:17,983  INFO Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.? [?] - MESSAGE: Sending file. Request path: '/favicon.ico'. Physical path: 'F:\vsdemo\MvcMovie\wwwroot\favicon.ico'
+ 2019-04-15 00:29:17,986  INFO Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.? [?] - MESSAGE: Sending file. Request path: '/favicon.ico'. Physical path: 'F:\vsdemo\MvcMovie\wwwroot\favicon.ico'
+ 2019-04-15 00:29:17,996  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 34.35ms 200 image/x-icon
+ 2019-04-15 00:29:17,998  INFO Microsoft.AspNetCore.Hosting.Internal.WebHost.? [?] - MESSAGE: Request finished in 34.35ms 200 image/x-icon
+ 

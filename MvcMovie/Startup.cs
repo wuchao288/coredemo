@@ -16,6 +16,18 @@ using Microsoft.AspNetCore.Mvc.Razor;
 
 using System.Globalization;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using Utility.Operator;
+using Service;
+using Microsoft.Extensions.Logging;
+using Utility;
+using log4net.Repository;
+using log4net;
+using log4net.Config;
+using System.IO;
+using Blog.Core.Log;
 
 namespace MvcMovie
 {
@@ -25,21 +37,47 @@ namespace MvcMovie
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            repository = LogManager.CreateRepository("Blog.Core");
+            //指定配置文件，如果这里你遇到问题，应该是使用了InProcess模式，请查看Blog.Core.csproj,并删之
+            XmlConfigurator.Configure(repository, new FileInfo("log4net.config"));
         }
 
         public IConfiguration Configuration { get; }
-
+        public static ILoggerRepository repository { get; set; }
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMemoryCache();
+            services.AddHttpContextAccessor();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+                {
+                    //认证失败，会自动跳转到这个地址
+                    options.LoginPath = "/Login/Login";
+                    options.Cookie.SameSite= SameSiteMode.None;
+                    //过期时间
+                    options.ExpireTimeSpan = TimeSpan.FromMinutes(0.5);
+                    //时间过了一半时是否自动加长
+                    options.SlidingExpiration = false;
+                    options.Events = new CookieAuthenticationEvents
+                    {
+                        OnValidatePrincipal = LastChangedValidator.ValidateAsync
+                    };
+                });
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+                //options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            //services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
+            services.AddScoped<IAuthorizationService,MyAuthorizationService>();
+            services.AddScoped<IUserRepository,UserRepository>();
+            services.AddSingleton<IOperatorProvider, OperatorProvider>();
+            services.AddScoped<IUseRBLL, UseRBLL>();
+            services.AddSingleton<ILoggerHelper, LogHelper>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix); ;
 
             //services.AddDbContext<MvcMovieContext>(options =>
@@ -73,6 +111,8 @@ namespace MvcMovie
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+          
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -87,31 +127,52 @@ namespace MvcMovie
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-        //    #region Localization
-        //    // REMARK: you may refactor this into a separate method as it's better to avoid long methods with regions
-        //    var supportedCultures = new[]
-        //    {
-        //    new CultureInfo(defaultCulutreName),
-        //    new CultureInfo("pl-PL")
-        //};
-        //    var localizationOptions = new RequestLocalizationOptions
-        //    {
-        //        DefaultRequestCulture = new RequestCulture(defaultCulutreName, defaultCulutreName),
-        //        SupportedCultures = supportedCultures,
-        //        SupportedUICultures = supportedCultures,
-        //        // you can change the list of providers, if you don't want the default behavior
-        //        // e.g. the following line enables to pick up culture ONLY from cookies
-        //        RequestCultureProviders = new[] { new CookieRequestCultureProvider() }
-        //    };
-        //    app.UseRequestLocalization(localizationOptions);
-        //    #endregion
+            //    #region Localization
+            //    // REMARK: you may refactor this into a separate method as it's better to avoid long methods with regions
+            //    var supportedCultures = new[]
+            //    {
+            //    new CultureInfo(defaultCulutreName),
+            //    new CultureInfo("pl-PL")
+            //};
+            //    var localizationOptions = new RequestLocalizationOptions
+            //    {
+            //        DefaultRequestCulture = new RequestCulture(defaultCulutreName, defaultCulutreName),
+            //        SupportedCultures = supportedCultures,
+            //        SupportedUICultures = supportedCultures,
+            //        // you can change the list of providers, if you don't want the default behavior
+            //        // e.g. the following line enables to pick up culture ONLY from cookies
+            //        RequestCultureProviders = new[] { new CookieRequestCultureProvider() }
+            //    };
+            //    app.UseRequestLocalization(localizationOptions);
+            //    #endregion
+
+            //开启本地化
             app.UseRequestLocalization();
+
+            //开启认证中间件
+            app.UseAuthentication();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(
+                  name: "System",
+                  template: "{area:exists}/{controller=Index}/{action=Index}/{id?}");
             });
+        }
+    }
+
+
+    public interface IUserRepository {
+        bool ValidateLastChanged(ClaimsPrincipal userPrincipal,string lastChanged);
+    }
+    public class UserRepository:IUserRepository
+    {
+       public bool ValidateLastChanged(ClaimsPrincipal userPrincipal, string lastChanged)
+        {
+            return true;
         }
     }
 }

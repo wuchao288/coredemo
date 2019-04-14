@@ -6,21 +6,44 @@
     <UserSecretsId>5461d65a-ef7a-425f-904c-47a263919704</UserSecretsId>
      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
      <ApplicationIcon />
-     <OutputType>Library</OutputType>
+     <OutputType>Exe</OutputType>
      <StartupObject />
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="ClassLibrary1\**" />
+    <Content Remove="ClassLibrary1\**" />
+    <EmbeddedResource Remove="ClassLibrary1\**" />
+    <None Remove="ClassLibrary1\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="2.2.10" />
     <PackageReference Include="OrchardCore.Localization.Core" Version="1.0.0-beta2-70992" />
   </ItemGroup>
 
 
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\Utility.csproj" />
     <ProjectReference Include="..\Model\Model.csproj" />
     <ProjectReference Include="..\Service\Service.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="logfile\" />
+    <Folder Include="Log\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Update="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 

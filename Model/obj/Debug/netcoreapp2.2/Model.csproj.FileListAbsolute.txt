@@ -1,0 +1,9 @@
+F:\vsdemo\Model\bin\Debug\netcoreapp2.2\Model.deps.json
+F:\vsdemo\Model\bin\Debug\netcoreapp2.2\Model.dll
+F:\vsdemo\Model\bin\Debug\netcoreapp2.2\Model.pdb
+F:\vsdemo\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache
+F:\vsdemo\Model\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+F:\vsdemo\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
+F:\vsdemo\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
+F:\vsdemo\Model\obj\Debug\netcoreapp2.2\Model.dll
+F:\vsdemo\Model\obj\Debug\netcoreapp2.2\Model.pdb

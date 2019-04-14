@@ -2,6 +2,10 @@ using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 using Service;
 using Model;
+using Utility.Operator;
+using Microsoft.Extensions.Logging;
+using log4net;
+using Blog.Core.Log;
 
 namespace MvcMovie.Controllers
 {
@@ -9,7 +13,13 @@ namespace MvcMovie.Controllers
     {
         // 
         // GET: /HelloWorld/
-
+        private readonly IUseRBLL _UseRBLL;
+        private readonly ILoggerHelper _log;
+        public HelloWorldController(IUseRBLL UseRBLL, ILoggerHelper log)
+        {
+            _UseRBLL = UseRBLL;
+            _log = log;
+        }
         public string Index()
         {
             return "This is my default action...";
@@ -31,6 +41,8 @@ namespace MvcMovie.Controllers
         }
        public  IActionResult Insert()
         {
+            _log.Info(typeof(HelloWorldController), "33333");
+            ViewBag.data= _UseRBLL.testc();
             return View();
         }
     }

@@ -10,6 +10,7 @@ namespace Service
     {
         public DbSet<T> GetDb()
         {
+
             return new DbSet<T>(Db);
         }
         public async Task<string> AddAsync(T parm)
@@ -17,6 +18,7 @@ namespace Service
             try
             {
                 var dbres = GetDb().Insert(parm);
+               
             }
             catch (Exception ex)
             {

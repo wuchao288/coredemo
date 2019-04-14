@@ -6,3 +6,4 @@ F:\vsdemo\Model\obj\Debug\netcoreapp1.1\Model.AssemblyInfoInputs.cache
 F:\vsdemo\Model\obj\Debug\netcoreapp1.1\Model.AssemblyInfo.cs
 F:\vsdemo\Model\obj\Debug\netcoreapp1.1\Model.dll
 F:\vsdemo\Model\obj\Debug\netcoreapp1.1\Model.pdb
+F:\vsdemo\Model\obj\Debug\netcoreapp1.1\Model.csprojAssemblyReference.cache
