@@ -7,22 +7,30 @@ using Microsoft.Extensions.Logging;
 using log4net;
 using Blog.Core.Log;
 using System;
+using Microsoft.Extensions.Localization;
+
 
 namespace MvcMovie.Controllers
 {
     public class HelloWorldController : Controller
     {
+        private readonly IStringLocalizer<HelloWorldController> _localizer;
+
+    
+
         // 
         // GET: /HelloWorld/
         private readonly IUseRBLL _UseRBLL;
         private readonly ILoggerHelper _log;
-        public HelloWorldController(IUseRBLL UseRBLL, ILoggerHelper log)
+        public HelloWorldController(IUseRBLL UseRBLL, ILoggerHelper log,IStringLocalizer<HelloWorldController> localizer)
         {
             _UseRBLL = UseRBLL;
            _log = log;
+            _localizer = localizer;
         }
         public string Index()
         {
+
             return "This is my default action...";
         }
 
@@ -42,18 +50,8 @@ namespace MvcMovie.Controllers
         }
        public  IActionResult Insert()
         {
-            try
-            {
-                int o = 0;
-                int c = 10 / o;
-            }
-            catch (Exception ex)
-            {
-
-                _log.Error(typeof(HelloWorldController), "33333", ex);
-            }
-           
-            ViewBag.data= _UseRBLL.testc();
+            ViewBag.data= _UseRBLL.testc() +
+             _localizer["Hello world!"]; 
             return View();
         }
     }

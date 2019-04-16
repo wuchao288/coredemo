@@ -1,2 +1,5 @@
 msgid "Hello world!"
 msgstr "Hello w!"
+
+msgid "ReleaseDate"
+msgstr "ReleaseDate2"

@@ -29,6 +29,8 @@ using log4net.Config;
 using System.IO;
 using Blog.Core.Log;
 
+
+
 namespace MvcMovie
 {
     public class Startup

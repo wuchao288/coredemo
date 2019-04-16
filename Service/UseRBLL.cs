@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Localization;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -14,11 +15,14 @@ namespace Service
     }
     public class UseRBLL: IUseRBLL
     {
+        public IStringLocalizer _T { get; set; }
+
         private readonly IOperatorProvider _httpContextAccessor;
         //IOperatorProvider httpContextAccessor
-        public UseRBLL(IOperatorProvider httpContextAccessor)
+        public UseRBLL(IOperatorProvider httpContextAccessor, IStringLocalizer<UseRBLL>  T)
         {
             _httpContextAccessor = httpContextAccessor;
+            _T = T;
         }
         public  string testc()
         {
