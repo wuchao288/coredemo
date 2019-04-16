@@ -15,16 +15,20 @@ namespace Service
     public class UseRBLL: IUseRBLL
     {
         private readonly IOperatorProvider _httpContextAccessor;
+        //IOperatorProvider httpContextAccessor
         public UseRBLL(IOperatorProvider httpContextAccessor)
         {
             _httpContextAccessor = httpContextAccessor;
         }
         public  string testc()
         {
-            Task.Run(() => {
+            //异步操作
+            Task.Run(() =>
+            {
                 Thread.Sleep(5000);
             });
             return _httpContextAccessor.Current.RealName;
+           
         }
     }
 }

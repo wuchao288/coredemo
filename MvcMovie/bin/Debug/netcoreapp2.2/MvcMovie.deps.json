@@ -31,8 +31,7 @@
           "Model": "1.0.0",
           "OrchardCore.Localization.Core": "1.0.0-beta2-70992",
           "Service": "1.0.0",
-          "Utility": "1.0.0",
-          "log4net": "2.0.8"
+          "Utility": "1.0.0"
         },
         "runtime": {
           "MvcMovie.dll": {}

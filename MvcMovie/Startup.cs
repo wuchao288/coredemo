@@ -56,7 +56,7 @@ namespace MvcMovie
                     options.LoginPath = "/Login/Login";
                     options.Cookie.SameSite= SameSiteMode.None;
                     //过期时间
-                    options.ExpireTimeSpan = TimeSpan.FromMinutes(0.5);
+                    options.ExpireTimeSpan = TimeSpan.FromMinutes(1200);
                     //时间过了一半时是否自动加长
                     options.SlidingExpiration = false;
                     options.Events = new CookieAuthenticationEvents
@@ -78,7 +78,7 @@ namespace MvcMovie
             services.AddSingleton<IOperatorProvider, OperatorProvider>();
             services.AddScoped<IUseRBLL, UseRBLL>();
             services.AddSingleton<ILoggerHelper, LogHelper>();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix); ;
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
 
             //services.AddDbContext<MvcMovieContext>(options =>
             //  options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));

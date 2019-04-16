@@ -1,0 +1,26 @@
+
+＝＝＝＝＝＝＝＝＝＝ 
+【日志级别】INFO  
+【记录时间】2019-04-16 22:45:21,997 
+【线程编号】[6] 
+【执行时间】[2542]毫秒 
+【执行信息】33333 
+【执行的类】MvcMovie.Controllers.HelloWorldController System.Exception: werwee23
+
+＝＝＝＝＝＝＝＝＝＝ 
+【日志级别】INFO  
+【记录时间】2019-04-16 22:47:23,053 
+【线程编号】[6] 
+【执行时间】[3407]毫秒 
+【执行信息】33333 
+【执行的类】MvcMovie.Controllers.HelloWorldController 
+【执行的类】? System.Exception: werwee23
+
+＝＝＝＝＝＝＝＝＝＝ 
+【日志级别】INFO  
+【记录时间】2019-04-16 22:47:56,245 
+【线程编号】[6] 
+【执行时间】[2195]毫秒 
+【执行信息】33333 
+【执行的类】MvcMovie.Controllers.HelloWorldController 
+【执行的类】? 

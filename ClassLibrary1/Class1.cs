@@ -403,6 +403,8 @@ namespace Blog.Core.Log
         /// <param name="exception">ex</param>
         public void Error(Type source, object message, Exception exception)
         {
+
+            message=string.Format("{0} \r\n【异常类型】{1} \r\n【异常信息】{2} \r\n【堆栈调用】{3}", new object[] { message, exception.GetType().Name, exception.Message, exception.StackTrace });
             GetLogger(source).Error(message, exception);
         }
 

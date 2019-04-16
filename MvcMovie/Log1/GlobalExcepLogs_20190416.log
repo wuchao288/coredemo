@@ -1,0 +1,59 @@
+
+＝＝＝＝＝＝＝＝＝＝ 
+【日志级别】ERROR 
+【记录时间】2019-04-16 22:44:10,336 
+【线程编号】[10] 
+【执行时间】[20426]毫秒 
+【出错文件】? 
+【出错行号】? 
+【出错的类】MvcMovie.Controllers.HelloWorldController 属性[(null)] 
+【错误描述】33333 
+【错误详情】
+System.Exception: werwee23
+
+＝＝＝＝＝＝＝＝＝＝ 
+【日志级别】ERROR 
+【记录时间】2019-04-16 22:52:27,642 
+【线程编号】[9] 
+【执行时间】[4726]毫秒 
+【出错文件】? 
+【出错行号】? 
+【出错的类】MvcMovie.Controllers.HelloWorldController 属性[(null)] 
+【错误描述】【自定义内容】：33333 
+【异常类型】：Exception 
+【异常信息】：errot 
+【堆栈调用】： 
+【错误详情】
+System.Exception: errot
+
+＝＝＝＝＝＝＝＝＝＝ 
+【日志级别】ERROR 
+【记录时间】2019-04-16 22:54:03,159 
+【线程编号】[9] 
+【执行时间】[2778]毫秒 
+【出错文件】? 
+【出错行号】? 
+【出错的类】MvcMovie.Controllers.HelloWorldController 属性[(null)] 
+【错误描述】【自定义内容】：33333 
+【异常类型】：DivideByZeroException 
+【异常信息】：Attempted to divide by zero. 
+【堆栈调用】：   at MvcMovie.Controllers.HelloWorldController.Insert() in F:\vsdemo\MvcMovie\Controllers\HelloWorldController.cs:line 48 
+【错误详情】
+System.DivideByZeroException: Attempted to divide by zero.
+   at MvcMovie.Controllers.HelloWorldController.Insert() in F:\vsdemo\MvcMovie\Controllers\HelloWorldController.cs:line 48
+
+＝＝＝＝＝＝＝＝＝＝ 
+【日志级别】ERROR 
+【记录时间】2019-04-16 22:55:22,934 
+【线程编号】[9] 
+【执行时间】[2683]毫秒 
+【出错文件】? 
+【出错行号】? 
+【出错的类】MvcMovie.Controllers.HelloWorldController 
+【错误描述】33333 
+【异常类型】：DivideByZeroException 
+【异常信息】：Attempted to divide by zero. 
+【堆栈调用】：   at MvcMovie.Controllers.HelloWorldController.Insert() in F:\vsdemo\MvcMovie\Controllers\HelloWorldController.cs:line 48 
+【错误详情】
+System.DivideByZeroException: Attempted to divide by zero.
+   at MvcMovie.Controllers.HelloWorldController.Insert() in F:\vsdemo\MvcMovie\Controllers\HelloWorldController.cs:line 48

@@ -6,6 +6,7 @@ using Utility.Operator;
 using Microsoft.Extensions.Logging;
 using log4net;
 using Blog.Core.Log;
+using System;
 
 namespace MvcMovie.Controllers
 {
@@ -18,7 +19,7 @@ namespace MvcMovie.Controllers
         public HelloWorldController(IUseRBLL UseRBLL, ILoggerHelper log)
         {
             _UseRBLL = UseRBLL;
-            _log = log;
+           _log = log;
         }
         public string Index()
         {
@@ -41,7 +42,17 @@ namespace MvcMovie.Controllers
         }
        public  IActionResult Insert()
         {
-            _log.Info(typeof(HelloWorldController), "33333");
+            try
+            {
+                int o = 0;
+                int c = 10 / o;
+            }
+            catch (Exception ex)
+            {
+
+                _log.Error(typeof(HelloWorldController), "33333", ex);
+            }
+           
             ViewBag.data= _UseRBLL.testc();
             return View();
         }
