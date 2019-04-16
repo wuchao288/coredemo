@@ -80,8 +80,9 @@ namespace MvcMovie
             services.AddSingleton<IOperatorProvider, OperatorProvider>();
             services.AddScoped<IUseRBLL, UseRBLL>();
             services.AddSingleton<ILoggerHelper, LogHelper>();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
-
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+            .AddDataAnnotationsLocalization();
             //services.AddDbContext<MvcMovieContext>(options =>
             //  options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));
 
