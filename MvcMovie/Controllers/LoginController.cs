@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Model;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -25,6 +26,7 @@ namespace MvcMovie.Controllers
         public async Task<IActionResult> LoginPost(LoginViewModel model, string returnUrl = "")
         {
             ViewData["ReturnUrl"] = returnUrl;
+            ValidationAttributeUtil.GetRequiredErrorMessage("姓名");
             if (ModelState.IsValid)
             {
                 bool succee = (model.UserName == "admin") && (model.Password == "123");
@@ -43,16 +45,16 @@ namespace MvcMovie.Controllers
 
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-                    return Redirect("/");
+                    return Content("ok");
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "帐号或者密码错误。");
-                    return View(model);
+                    ModelState.AddModelError("ValidError", "帐号或者密码错误。");
+                    return Json(ModelState);
                 }
             }
 
-            return View(model);
+            return Json(ModelState);
         }
 
         public async Task<IActionResult> Logout()

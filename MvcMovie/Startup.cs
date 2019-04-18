@@ -28,8 +28,9 @@ using log4net;
 using log4net.Config;
 using System.IO;
 using Blog.Core.Log;
-
-
+using Microsoft.AspNetCore.Razor.TagHelpers;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using MvcMovie.TagHelpers;
 
 namespace MvcMovie
 {
@@ -49,6 +50,9 @@ namespace MvcMovie
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //TagHelper 
+            services.AddTransient<IHtmlGenerator, MyDefaultHtmlGenerator>();
+            services.AddTransient<ValidationHtmlAttributeProvider,MYDefaultValidationHtmlAttributeProvider>();
             services.AddMemoryCache();
             services.AddHttpContextAccessor();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -73,7 +77,7 @@ namespace MvcMovie
                 //options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
+            
             //services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
             services.AddScoped<IAuthorizationService,MyAuthorizationService>();
             services.AddScoped<IUserRepository,UserRepository>();
@@ -129,6 +133,7 @@ namespace MvcMovie
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            
 
             //    #region Localization
             //    // REMARK: you may refactor this into a separate method as it's better to avoid long methods with regions

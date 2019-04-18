@@ -7,3 +7,12 @@ F:\vsdemo\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
 F:\vsdemo\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
 F:\vsdemo\Model\obj\Debug\netcoreapp2.2\Model.dll
 F:\vsdemo\Model\obj\Debug\netcoreapp2.2\Model.pdb
+d:\Users\Administrator\Source\Repos\coredemo\Model\bin\Debug\netcoreapp2.2\Model.deps.json
+d:\Users\Administrator\Source\Repos\coredemo\Model\bin\Debug\netcoreapp2.2\Model.dll
+d:\Users\Administrator\Source\Repos\coredemo\Model\bin\Debug\netcoreapp2.2\Model.pdb
+d:\Users\Administrator\Source\Repos\coredemo\Model\obj\Debug\netcoreapp2.2\Model.csprojAssemblyReference.cache
+d:\Users\Administrator\Source\Repos\coredemo\Model\obj\Debug\netcoreapp2.2\Model.csproj.CoreCompileInputs.cache
+d:\Users\Administrator\Source\Repos\coredemo\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfoInputs.cache
+d:\Users\Administrator\Source\Repos\coredemo\Model\obj\Debug\netcoreapp2.2\Model.AssemblyInfo.cs
+d:\Users\Administrator\Source\Repos\coredemo\Model\obj\Debug\netcoreapp2.2\Model.dll
+d:\Users\Administrator\Source\Repos\coredemo\Model\obj\Debug\netcoreapp2.2\Model.pdb

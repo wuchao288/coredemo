@@ -4,12 +4,26 @@
 @{
     ViewData["Title"] = "登录";
 }
+<style>
+    /* ----- Validation and error messages class starts -----*/
+    .input-validation-error {
+        border-color: #dc3545;
+    }
 
+    /* -- --Validation and error messages class ends -- --*/
+</style>
 <div class="row">
     <div class="col-xs-10 col-sm-8 col-md-6">
-        <form asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
 
-            <div asp-validation-summary="All" class="text-danger"></div>
+        <form asp-controller="Login" asp-action="Login" formnovalidate
+              data-ajax-begin="onBegin" data-ajax-complete="onComplete"
+              data-ajax-failure="onFailed" data-ajax-success="onSuccess"
+              data-ajax="true" data-ajax-method="POST" data-ajax-loading="#load">
+            <!--所有的错误-->
+            @*<div asp-validation-summary="All" class="text-danger"></div>*@
+            <!---不包含属性上的错误---->
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
                 <label asp-for="UserName"></label>
                 <input asp-for="UserName" class="form-control" placeholder="请输入用户名" />
@@ -17,16 +31,277 @@
             </div>
             <div class="form-group">
                 <label asp-for="Password"></label>
-                <input asp-for="Password" class="form-control" placeholder="请输入密码" />
+                @*<input asp-for="Password" class="form-control" />*@
                 <span asp-validation-for="Password" class="text-danger"></span>
+
             </div>
+            <field cols="3" label="wu">
+
+            </field>
+
+            <easyuivalidatebox asp-for="Password"    class="form-control" />
+
+            <einput asp-for="PUIuu" class="form-control" />
 
             <button type="submit" class="btn btn-primary">登录</button>
-
         </form>
     </div>
 </div>
+<div id="Results"></div>
 
 @section Scripts {
+
+    <script>
+
+        //创建简单遮罩层，显示load时的信息，配合Unobtrusive
+
+
+        $(document).ready(function () {
+
+            console.info($("div[data-loadlayer=true]"));
+        });
+
+        var results = $("#Results");
+        var onBegin = function () {
+            results.html("<img src=\"/images/ajax-loader.gif\" alt=\"Loading\" />");
+        };
+
+        var onComplete = function () {
+            //results.html("");
+        };
+
+        var onSuccess = function (context) {
+            alert(context);
+        };
+
+        var onFailed = function (context) {
+            alert("Failed");
+        };
+    </script>
+    <script>
+        ; (function ($) {
+            //设置背景层高
+            function height() {
+                var scrollHeight, offsetHeight;
+                // handle IE 6
+                if ($.browser.msie && $.browser.version < 7) {
+                    scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+                    offsetHeight = Math.max(document.documentElement.offsetHeight, document.body.offsetHeight);
+                    if (scrollHeight < offsetHeight) {
+                        return $(window).height();
+                    } else {
+                        return scrollHeight;
+                    }
+                    // handle "good" browsers
+                }
+                else if ($.browser.msie && $.browser.version == 8) {
+                    return $(document).height() - 4;
+                }
+                else {
+                    return $(document).height();
+                }
+            };
+            //设置背景层宽
+            function width() {
+                var scrollWidth, offsetWidth;
+                // handle IE
+                if ($.browser.msie) {
+                    scrollWidth = Math.max(document.documentElement.scrollWidth, document.body.scrollWidth);
+                    offsetWidth = Math.max(document.documentElement.offsetWidth, document.body.offsetWidth);
+                    if (scrollWidth < offsetWidth) {
+                        return $(window).width();
+                    } else {
+                        return scrollWidth;
+                    }
+                    // handle "good" browsers
+                }
+                else {
+                    return $(document).width();
+                }
+            };
+            /*==========全部遮罩=========*/
+            function createLayer(load) {
+                //背景遮罩层
+                var layer = $("<div id=" + load.attr("data-loadlayer-id") + "></div>");
+                layer.css({
+                    zIndex: 9998,
+                    position: "absolute",
+                    height: height() + "px",
+                    width: width() + "px",
+                    background: "black",
+                    top: 0,
+                    left: 0,
+                    filter: "alpha(opacity=30)",
+                    opacity: 0.3
+                });
+
+                //图片及文字层
+                var content = $("<div id=" + load.attr("data-loadlayer-id") + "-content" + "></div>");
+                content.css({
+                    textAlign: "left",
+                    position: "absolute",
+                    zIndex: 9999,
+                    //height: opt.height + "px",
+                    //width: opt.width + "px",
+                    top: "50%",
+                    left: "50%",
+                    verticalAlign: "middle",
+                    //background: opt.backgroudColor,"#ECECEC"
+                    background: "#ECECEC",
+                    borderRadius: "3px",
+                    padding: "2px 5px 2px 5px",
+                    fontSize: "13px"
+                });
+
+                //content.append("<img style='vertical-align:middle;margin:" + (opt.height / 4) + "px; 0 0 5px;margin-right:5px;' src='" + opt.backgroundImage + "' /><span style='text-align:center; vertical-align:middle;'>" + opt.text + "</span>");
+                content.append("<span style='text-align:center; vertical-align:middle;color:#000000'>" + load.attr("data-loadlayer-msg") + "</span>");
+                load.append(layer.append(content));
+                var top = content.css("top").replace('px', '');
+                var left = content.css("left").replace('px', '');
+                content.css("top", (parseFloat(top) - parseFloat(content.css("height")) / 2)).css("left", (parseFloat(left) - parseFloat(content.css("width")) / 2));
+                console.info("backgroudColor");
+                layer.hide();
+                return this;
+            }
+
+            $(document).ready(function () {
+                createLayer($("div[data-loadlayer=true]"))
+                console.info("div[data-loadlayer=true]");
+            });
+        })($)
+    </script>
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }
+<style>
+    .loadEffect {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+
+        .loadEffect span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: lightgreen;
+            position: absolute;
+            -webkit-animation: load 1.04s ease infinite;
+        }
+
+    @@-webkit-keyframes load {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0.2;
+        }
+    }
+
+    .loadEffect span:nth-child(1) {
+        left: 0;
+        top: 50%;
+        margin-top: -8px;
+        -webkit-animation-delay: 0.13s;
+    }
+
+    .loadEffect span:nth-child(2) {
+        left: 14px;
+        top: 14px;
+        -webkit-animation-delay: 0.26s;
+    }
+
+    .loadEffect span:nth-child(3) {
+        left: 50%;
+        top: 0;
+        margin-left: -8px;
+        -webkit-animation-delay: 0.39s;
+    }
+
+    .loadEffect span:nth-child(4) {
+        top: 14px;
+        right: 14px;
+        -webkit-animation-delay: 0.52s;
+    }
+
+    .loadEffect span:nth-child(5) {
+        right: 0;
+        top: 50%;
+        margin-top: -8px;
+        -webkit-animation-delay: 0.65s;
+    }
+
+    .loadEffect span:nth-child(6) {
+        right: 14px;
+        bottom: 14px;
+        -webkit-animation-delay: 0.78s;
+    }
+
+    .loadEffect span:nth-child(7) {
+        bottom: 0;
+        left: 50%;
+        margin-left: -8px;
+        -webkit-animation-delay: 0.91s;
+    }
+
+    .loadEffect span:nth-child(8) {
+        bottom: 14px;
+        left: 14px;
+        -webkit-animation-delay: 1.04s;
+    }
+</style>
+
+@*<div class="loadEffect" id="loadEffect">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="">加载中</span>
+    </div>*@
+
+<div data-loadlayer="true" data-loadlayer-id="load" data-loadlayer-msg="loading..."></div>
+
+<style>
+    .datagrid-mask {
+        background: #ccc;
+    }
+
+    .datagrid-mask-msg {
+        border-color: #D3D3D3;
+    }
+
+    .datagrid-mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+        display: none;
+    }
+
+    .datagrid-mask-msg {
+        position: absolute;
+        top: 50%;
+        margin-top: -20px;
+        padding: 10px 5px 10px 30px;
+        width: auto;
+        border-width: 2px;
+        border-style: solid;
+        display: none;
+        background: #ffffff url('http://localhost:2323/Content/jquery-easyui-1.4.1/themes/gray/images/loading.gif') no-repeat scroll 5px center;
+    }
+</style>
+
+<div id="loading" style="display:none">
+    <div id="loading1" class="datagrid-mask" style="display: block; width: 100%; height: 937px; z-index: 10000;"></div>
+    <div id="loading2" class="datagrid-mask-msg" style="display: block; left: 865px; top: 446px; z-index: 10000;">正在处理，请稍候。。。</div>
+</div>
