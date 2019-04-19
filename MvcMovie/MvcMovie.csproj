@@ -17,6 +17,10 @@
     <None Remove="ClassLibrary1\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="EInputTagHelper.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />

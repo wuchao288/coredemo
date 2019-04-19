@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -50,7 +51,21 @@ namespace MvcMovie.Controllers
                 else
                 {
                     ModelState.AddModelError("ValidError", "帐号或者密码错误。");
-                    return Json(ModelState);
+                    StringBuilder strBuild = new StringBuilder();
+                    foreach (var item in ModelState.Values)
+                    {
+                        if (item.Errors.Count > 0)
+                        {
+                            int itemErrorCount = item.Errors.Count;
+                            for (int i = 0; i < itemErrorCount; i++)
+                            {
+                                strBuild.Append(item.Errors[i].ErrorMessage);
+                                strBuild.Append("<br/>");
+                            }
+                        }
+                    }
+                  
+                    return Json(strBuild.ToString());
                 }
             }
 
